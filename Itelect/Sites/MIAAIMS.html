@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../bootstrap-5.3.0-alpha3-dist/css/bootstrap.css"
+    />
+    <style>
+      #background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../5-ninoy-aquino-airport.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.5;
+      }
+      .background-blur {
+        position: absolute;
+        backdrop-filter: blur(3px);
+        min-height: 100%;
+        min-width: 100%;
+      }
+
+      @media screen and (max-width: 450px) {
+        #background {
+          position: fixed;
+          z-index: -1;
+        }
+        .background-blur {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+        }
+        #section1 {
+          position: relative;
+          top: auto;
+          left: auto;
+          transform: none;
+        }
+      }
+      @media screen and (max-width: 450px) {
+        #background {
+          position: fixed;
+          z-index: -1;
+        }
+        .background-blur {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+        }
+        #section1 {
+          position: relative;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          max-width: 90%;
+        }
+        #section1-image {
+          height: 50% !important;
+          width: 50% !important;
+          margin-bottom: 20px;
+        }
+        .section1-buttonDiv {
+          flex-direction: column;
+        }
+        .section1-button {
+          margin-bottom: 20px;
+        }
+        #section1-image3 {
+          height: 10% !important;
+          width: 10% !important;
+        }
+      }
+
+      #section1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #section1-image {
+        position: relative;
+        left: 50%;
+        height: auto;
+        width: 20%;
+        transform: translate(-50%, 0%);
+      }
+
+      .section1-button {
+        position: relative;
+        height: 70px;
+        width: 200px;
+        margin-inline: 3%;
+      }
+      .section1-buttonDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #section1-image2 {
+        position: relative;
+        left: 50%;
+        height: auto;
+        width: 20%;
+        transform: translate(-50%, 0%);
+        margin-top: 3%;
+      }
+
+      .font-color {
+        color: #604b38;
+      }
+      #section1-image3 {
+        position: relative;
+        height: auto;
+        width: 5%;
+      }
+    </style>
+
+    <style>
+      body > table {
+        width: 80%;
+        margin: 40px auto;
+        background-color: lightblue;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      table.list {
+        width: 100%;
+      }
+      td,
+      th {
+        border: 1px solid #ddd;
+        text-align: left;
+        padding: 8px 15px;
+      }
+      tr:nth-child(even),
+      table.list thead > tr {
+        background-color: #ddd;
+      }
+      input[type="text"],
+      input[type="number"] {
+        width: 91%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      input[type="submit"],
+      input[type="reset"] {
+        background: #eee;
+        padding: 6px 12px;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 30px;
+        border: none;
+        margin: 15px 0 10px;
+        outline: none;
+      }
+      input[type="submit"]:hover {
+        background: #f3f3f3;
+      }
+    </style>
+    <title>MIAA Information Management System</title>
+  </head>
+
+  <body>
+    <div id="background"></div>
+    <div class="background-blur"></div>
+
+    <div id="section1" class="container">
+      <a href="../index.html">
+        <button class="btn btn-outline-danger">Back</button></a
+      >
+      <img id="section1-image" src="../gm-mnl.png" alt="MIAA logo" />
+      <h1 class="text-center font-color">MIAA Information Management System</h1>
+      <table>
+        <tr>
+          <td>
+            <!--HTML form for crud operation-->
+            <form autocomplete="off" onsubmit="onFormSubmit()">
+              <div>
+                <label for="fullName">Full Name</label>
+                <input type="text" name="fullName" id="fullName" />
+              </div>
+              <div>
+                <label for="empCode">Email</label>
+                <input type="text" name="empCode" id="empCode" />
+              </div>
+              <div>
+                <label for="salary">Birthday</label>
+                <input type="text" name="salary" id="salary" />
+              </div>
+              <div>
+                <label for="city">Address</label>
+                <input type="text" name="city" id="city" />
+              </div>
+              <div class="form_action--button">
+                <input type="submit" value="Submit" />
+                <input type="reset" value="Reset" />
+              </div>
+            </form>
+          </td>
+          <td>
+            <table class="list" id="employeeList">
+              <thead>
+                <tr>
+                  <th>Full Name</th>
+                  <th>Email</th>
+                  <th>Birthday</th>
+                  <th>Address</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </td>
+        </tr>
+      </table>
+
+      <br /><br />
+      <h3 class="text-center fs-6">
+        Powered by
+        <img id="section1-image3" src="../IC-logo.png" alt="" />
+        Institute of Computing Inc.
+      </h3>
+    </div>
+
+    <script src="../Sites/index.js"></script>
+    >
+  </body>
+</html>

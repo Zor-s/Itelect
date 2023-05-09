@@ -1,0 +1,63 @@
+/* :root {
+  --desktop: 1200px;
+  --laptop-min: 992px;
+  --laptop-max: 1199px;
+  --tablet-min: 768px;
+  --tablet-max: 991px;
+  --phone: 767px;
+} */
+
+body {
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+}
+h1,
+h2 {
+  font-size: 2rem;
+}
+#section1-info{
+  border: 5px solid;
+  border-radius: 10px;
+}
+#section1-flightInfo {
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  margin: auto;
+}
+
+.section2-images {
+  position: relative;
+  display: inline;
+  height: auto;
+  max-width: 170px;
+  margin: auto;
+  left: 5vw;
+}
+#section2 {
+  position: relative;
+  margin-inline: auto;
+}
+#footer-logo {
+  position: relative;
+  margin-left: 50px;
+  margin-right: 50px;
+  height: 10em;
+  width: auto;
+}
+footer {
+  position: relative;
+  background-color: gray;
+  margin-bottom: 0;
+}
+
+.footer-link{
+  text-decoration: none;
+}
+.footer-link:hover{
+  text-decoration: underline;
+
+}
+#section1-carousel{
+  z-index: -2;
+}
