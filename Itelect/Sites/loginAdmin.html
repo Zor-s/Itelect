@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../bootstrap-5.3.0-alpha3-dist/css/bootstrap.css" />
+  <style>
+    /* div{
+    border: 1px solid;
+} */
+    #contents-center {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+
+    }
+  </style>
+  <title>Sign up</title>
+</head>
+
+<body>
+  <section class="h-100 gradient-form" style="background-color: #eee">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div id="contents-center" class="col-lg-6">
+                <div class="card-body p-md-5 mx-md-4">
+                  <a href="../index.html">
+                    <button class="btn btn-outline-danger">Back</button>
+                  </a>
+                  <div class="text-center">
+                    <img src="../fmis-logo.png" alt="fmis.logo" width="200" height="70" />
+                    <h4 class="mt-1 mb-5 pb-1"></h4>
+                  </div>
+
+                  <form>
+                    <p class="fs-6 text-center fw-bolder">Log In</p>
+
+                    <div class="form-outline mb-1">
+                      <input type="tel" id="form2Example11" class="form-control" placeholder="Enter Admin ID" />
+                      <label class="form-label" for="form2Example11">I.D</label>
+                    </div>
+
+                    <div class="form-outline mb-1">
+                      <input type="text" id="form2Example21" class="form-control" placeholder="Enter Admin Username" />
+                      <label class="form-label" for="form2Example21">Username</label>
+                    </div>
+
+                    <div class="form-outline mb-1">
+                      <input type="password" id="password" class="form-control" placeholder="Enter Admin Password" />
+                      <label class="form-label" for="password">Password</label>
+                      <button class="btn btn-outline-dark" type="button" onclick="togglePassword()">Show
+                        Password</button>
+
+                    </div>
+                    <br>
+                    <div class="text-center mb-5 pb-1">
+                      <a href="../Sites/viewAdmin.html">
+                        <button class="btn btn-outline-dark btn-block fa-lg gradient-custom-2 mb-3" type="button">
+                          Log In
+                        </button>
+                      </a>
+                      <br />
+                    </div>
+
+
+
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="../bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.js"></script>
+
+  <script>
+    function togglePassword() {
+      var x = document.getElementById("password");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+  </script>
+</body>
+
+</html>

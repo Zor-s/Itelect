@@ -8,55 +8,248 @@
       rel="stylesheet"
       href="bootstrap-5.3.0-alpha3-dist/css/bootstrap.css"
     />
-    <link rel="stylesheet" href="navbarstyle.css" />
-    <link rel="stylesheet" href="index.css" />
+
+
+    <!-- navbarCSS -->
+    <style>
+      /* #cover{
+  position: fixed;
+  z-index: -1;
+  background-color: #ced4da;
+  border: 5px solid;
+  width: 100%;
+  height: 100px;
+} */
+
+      #ZOnavbar-style {
+        z-index: 3;
+      }
+
+      #ZOnavbar2-style {
+        top: 8.7%;
+
+        /* border-top: #ced4da 20px solid; */
+        z-index: 1;
+        /* height: 10%;
+transform: translateY(-5%); */
+      }
+      .ZOnav-link-Style {
+        position: relative;
+        font-size: 15px;
+      }
+
+      .ZOnav-link-Style::before {
+        opacity: 0;
+        transition: all 0.3s;
+
+        content: "";
+        height: 5px;
+        width: 0%;
+        background-color: black;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 100px;
+        z-index: -5;
+      }
+
+      .ZOnav-link-Style:hover::before {
+        opacity: 1;
+        width: 100%;
+      }
+
+      #ZOnav-aboutMIAA {
+        white-space: nowrap;
+      }
+
+      #ZOnav-searchBar {
+        min-width: 200px;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown-organizational {
+        white-space: normal;
+        font-size: 15px;
+      }
+
+      .dropdown-menu a:hover {
+        background-color: #8c92ac;
+        color: #fff;
+      }
+
+      .dropdown-menu-end {
+        position: absolute;
+        right: 50;
+        left: auto;
+      }
+
+      #ZOnav-organizational {
+        top: 75%;
+        left: 100%;
+      }
+
+      #ZOnav-airline {
+        top: 0%;
+        left: 100%;
+      }
+
+      #ZOnav-terminal {
+        top: 13%;
+        left: 100%;
+      }
+
+      #ZOnav-img {
+        height: auto;
+        width: 200%;
+        margin-left: -5vw;
+        border-radius: 0px;
+      }
+
+      /* logo */
+      @media screen and (max-width: 991px) {
+        #ZOnav-img {
+          margin-left: 0vw;
+        }
+      }
+
+      @media screen and (max-width: 1300px) {
+        #ZOnav-img {
+          height: auto;
+          width: 180%;
+        }
+      }
+
+      .navbar.fixed-top {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+      }
+
+      .navbar.fixed-top + .navbar.fixed-top {
+        margin-top: 56px !important;
+      }
+
+      /*meow*/
+    </style>
+
+    <!-- Index.html -->
+    <style>
+      /* :root {
+  --desktop: 1200px;
+  --laptop-min: 992px;
+  --laptop-max: 1199px;
+  --tablet-min: 768px;
+  --tablet-max: 991px;
+  --phone: 767px;
+} */
+
+      body {
+        background-color: rgb(255, 255, 255);
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2 {
+        font-size: 2rem;
+      }
+
+
+
+      #ZOsection1-flightInfo {
+        position: relative;
+        transform: translateX(-50%);
+        left: 50%;
+        margin: auto;
+      }
+
+      .ZOsection2-images {
+        position: relative;
+        display: inline;
+        height: auto;
+        max-width: 170px;
+        margin: auto;
+        left: 5vw;
+      }
+
+      #ZOsection2 {
+        position: relative;
+        margin-inline: auto;
+      }
+
+      #ZOfooter-logo {
+        position: relative;
+        margin-left: 50px;
+        margin-right: 50px;
+        height: 10em;
+        width: auto;
+      }
+
+      footer {
+        position: relative;
+        background-color: gray;
+        margin-bottom: 0;
+      }
+
+      .ZOfooter-link {
+        text-decoration: none;
+      }
+
+      .ZOfooter-link:hover {
+        text-decoration: underline;
+      }
+
+      #ZOsection1-carousel {
+        z-index: -2;
+      }
+    </style>
 
     <title>MANILA INTERNATIONAL AIRPORT AUTHORITY</title>
   </head>
   <!-- ----------------------------------------------------------------------------------------------------- -->
 
   <body>
-
     <nav
-      id="navbar-style"
+      id="ZOnavbar-style"
       class="navbar fixed-top navbar-expand-lg navbar-light bg-dark-subtle"
     >
-
       <div class="container">
-
         <a
           style="width: 100px"
           href="http://www.gov.ph/"
           class="navbar-brand align-top"
         >
-          <img id="nav-img" class="" src="gm-mnl.png" alt="gm-mnl.png" />
+          <img id="ZOnav-img" class="" src="gm-mnl.png" alt="gm-mnl.png" />
         </a>
 
         <button
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
+          data-bs-target="#ZOnavbarNav"
           class="navbar-toggler"
         >
           <span class="navbar-toggler-icon"></span>
-          
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="ZOnavbarNav">
           <ul class="navbar-nav me-auto">
             <li class="nav-item active">
               <a
                 href="index.html"
-                class="nav-link nav-link-Style mx-3 fw-bolder"
+                class="nav-link ZOnav-link-Style mx-3 fw-bolder"
               >
                 Home
               </a>
             </li>
-            <li class="nav-item"><br></li>
+            <li class="nav-item"><br /></li>
             <li class="nav-item dropdown">
               <a
-                id="nav-aboutMIAA"
-                class="nav-link nav-link-Style mx-3 fw-bolder dropdown-toggle"
+                id="ZOnav-aboutMIAA"
+                class="nav-link ZOnav-link-Style mx-3 fw-bolder dropdown-toggle"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -66,7 +259,7 @@
 
               <ul
                 class="dropdown-menu dropdown-content"
-                aria-labelledby="nav-aboutMIAA"
+                aria-labelledby="ZOnav-aboutMIAA"
               >
                 <li>
                   <a
@@ -105,7 +298,7 @@
                   >
 
                   <ul
-                    id="nav-organizational"
+                    id="ZOnav-organizational"
                     class="dropdown-menu dropdown-menu-end dropdown-content2 dropdownHover-content2 w-75 position-absolute"
                   >
                     <li>
@@ -164,8 +357,8 @@
 
             <li class="nav-item dropdown">
               <a
-                class="nav-link nav-link-Style mx-3 fw-bolder dropdown-toggle"
-                id="nav-terminals"
+                class="nav-link ZOnav-link-Style mx-3 fw-bolder dropdown-toggle"
+                id="ZOnav-terminals"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -175,7 +368,7 @@
 
               <ul
                 class="dropdown-menu dropdown-content"
-                aria-labelledby="nav-terminals"
+                aria-labelledby="ZOnav-terminals"
               >
                 <li>
                   <a
@@ -184,7 +377,7 @@
                     data-bs-toggle="dropdown"
                     >Airline Directory</a
                   >
-                  <ul id="nav-airline" class="dropdown-menu">
+                  <ul id="ZOnav-airline" class="dropdown-menu">
                     <li>
                       <a
                         href="https://www.miaa.gov.ph/index.php/terminals/airline-directory/terminal-1"
@@ -238,7 +431,7 @@
                     >MIAA Terminal Directory</a
                   >
 
-                  <ul id="nav-terminal" class="dropdown-menu">
+                  <ul id="ZOnav-terminal" class="dropdown-menu">
                     <li>
                       <a
                         href="https://www.miaa.gov.ph/index.php/terminals/miaa-terminal-directory/terminal-1"
@@ -332,15 +525,15 @@
             <li class="nav-item active">
               <a
                 href="https://www.miaa.gov.ph/index.php/faq"
-                class="nav-link nav-link-Style mx-3 fw-bolder"
+                class="nav-link ZOnav-link-Style mx-3 fw-bolder"
               >
                 FAQ
               </a>
             </li>
             <li class="nav-item active">
               <a
-                href="Sites/MIAAIMS.html"
-                class="nav-link nav-link-Style mx-3 fw-bolder"
+                href="Sites/fmis.html"
+                class="nav-link ZOnav-link-Style mx-3 fw-bolder"
               >
                 Login
               </a>
@@ -349,7 +542,7 @@
 
           <form class="d-flex">
             <input
-              id="nav-searchBar"
+              id="ZOnav-searchBar"
               class="form-control me-2 outline"
               type="search"
               placeholder="Search"
@@ -364,7 +557,7 @@
     <!-- Navbar1^ -->
 
     <nav
-      id="navbar2-style"
+      id="ZOnavbar2-style"
       class="navbar fixed-top navbar-expand-lg navbar-light bg-dark-subtle"
     >
       <div class="container">
@@ -383,7 +576,7 @@
               <a
                 id="nav-issuances"
                 href="#"
-                class="nav-link nav-link-Style mx-3 fw-bolder dropdown-toggle"
+                class="nav-link ZOnav-link-Style mx-3 fw-bolder dropdown-toggle"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -437,7 +630,7 @@
             <li class="nav-item dropdown" href="#">
               <a
                 id="nav-opportunities"
-                class="nav-link nav-link-Style mx-3 fw-bolder dropdown-toggle"
+                class="nav-link ZOnav-link-Style mx-3 fw-bolder dropdown-toggle"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -470,7 +663,7 @@
             <li class="nav-item dropdown" href="#">
               <a
                 id="nav-bids"
-                class="nav-link nav-link-Style mx-3 fw-bolder dropdown-toggle"
+                class="nav-link ZOnav-link-Style mx-3 fw-bolder dropdown-toggle"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -517,7 +710,7 @@
             <li class="nav-item dropdown" href="#">
               <a
                 id="nav-reports"
-                class="nav-link nav-link-Style mx-3 fw-bolder dropdown-toggle"
+                class="nav-link ZOnav-link-Style mx-3 fw-bolder dropdown-toggle"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -542,7 +735,7 @@
             <li class="nav-item dropdown">
               <a
                 id="nav-announcements"
-                class="nav-link nav-link-Style mx-3 fw-bolder dropdown-toggle"
+                class="nav-link ZOnav-link-Style mx-3 fw-bolder dropdown-toggle"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -581,7 +774,7 @@
             <li class="nav-item dropdown">
               <a
                 id="nav-otherAgency"
-                class="nav-link nav-link-Style mx-3 fw-bolder dropdown-toggle"
+                class="nav-link ZOnav-link-Style mx-3 fw-bolder dropdown-toggle"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -672,18 +865,14 @@
 
     <!-- Navbar2^ -->
 
-    <!-- Navbar^ ---------------------------------------------------------------------------> 
+    <!-- Navbar^ --------------------------------------------------------------------------->
 
     <br /><br /><br /><br />
-    <!-- <h1 id="section1-info" class="text-center text-bg-info container border-danger">
-      Title of the selected system: MANILA INTERNATIONAL Airport AUTHORITY <br>
-      Link of the website reference: https://www.miaa.gov.ph/
 
-    </h1> -->
 
     <div class="container-lg">
       <div
-        id="section1-carousel"
+        id="ZOsection1-carousel"
         class="carousel slide"
         data-bs-ride="carousel"
         data-bs-ride="carousel"
@@ -718,7 +907,7 @@
       <h2 class="text-center">FLIGHT INFORMATION:</h2>
       <a href="https://miaagov.online/" target="_blank">
         <button
-          id="section1-flightInfo"
+          id="ZOsection1-flightInfo"
           class="btn btn-outline-info h-100 w-100"
         >
           <img
@@ -738,23 +927,23 @@
     <!-- Section 1^ -->
 
     <br /><br />
-    <div id="section2" class="container-lg">
+    <div id="ZOsection2" class="container-lg">
       <a href="https://www.miaa.gov.ph/index.php/transparency-seal">
         <img
-          class="section2-images"
+          class="ZOsection2-images"
           src="transparency-seal.png"
           alt="transparency-seal.png"
         />
       </a>
 
       <a href="https://www.foi.gov.ph/requests?agency=MIAA">
-        <img class="section2-images" src="foi.png" alt="foi.png" />
+        <img class="ZOsection2-images" src="foi.png" alt="foi.png" />
       </a>
       <a
         href="https://www.miaa.gov.ph/index.php/8-about-miaa/3354-corporate-governance"
       >
         <img
-          class="section2-images"
+          class="ZOsection2-images"
           src="corporate-governace.png"
           alt="corporate-governace.png"
         />
@@ -763,9 +952,9 @@
       <a
         href="https://www.miaa.gov.ph/index.php/announcements/miaa-announcements/127-miaa-whistleblowing"
       >
-        <img class="section2-images" src="gad-logo.png" alt="gad-logo.png" />
+        <img class="ZOsection2-images" src="gad-logo.png" alt="gad-logo.png" />
         <img
-          class="section2-images"
+          class="ZOsection2-images"
           src="miaa_sb_whistleblowing.png"
           alt="miaa_sb_whistleblowing.png"
         />
@@ -775,7 +964,7 @@
         href="https://www.miaa.gov.ph/index.php/announcements/miaa-announcements/3210-tutorial-and-knowledge-base-portal"
       >
         <img
-          class="section2-images"
+          class="ZOsection2-images"
           src="miaa_sb_tutorials_kb_portal.png"
           alt="miaa_sb_tutorials_kb_portal.png"
         />
@@ -789,7 +978,7 @@
         <div class="row">
           <div class="col-lg-3 col-md-12 mb-4 mb-md-0">
             <img
-              id="footer-logo"
+              id="ZOfooter-logo"
               src="Coat_of_arms_of_the_Philippines.svg.png"
               alt="Coat_of_arms_of_the_Philippines.svg.png"
             />
@@ -812,13 +1001,13 @@
               </li>
               <!-- link-underline-opacity-75-hover -->
               <li>
-                <a href="http://www.gov.ph/" class="text-dark footer-link">GOV.PH</a>
+                <a href="#!" class="text-dark ZOfooter-link">GOV.PH</a>
               </li>
               <li>
-                <a href="http://www.gov.ph/data" class="text-dark footer-link">Open Data Portal</a>
+                <a href="#!" class="text-dark ZOfooter-link">Open Data Portal</a>
               </li>
               <li>
-                <a href="https://www.officialgazette.gov.ph/" class="text-dark footer-link">Official Gazette</a>
+                <a href="#!" class="text-dark ZOfooter-link">Official Gazette</a>
               </li>
             </ul>
           </div>
@@ -828,35 +1017,35 @@
             <br />
             <ul class="list-unstyled">
               <li>
-                <a href="https://president.gov.ph/" class="text-dark footer-link"
+                <a href="#!" class="text-dark ZOfooter-link"
                   >Office of the President</a
                 >
               </li>
               <li>
-                <a href="https://ovp.gov.ph/" class="text-dark footer-link"
+                <a href="#!" class="text-dark ZOfooter-link"
                   >Office of the Vice President</a
                 >
               </li>
               <li>
-                <a href="http://legacy.senate.gov.ph/" class="text-dark footer-link"
+                <a href="#!" class="text-dark ZOfooter-link"
                   >Senate of the Philippines
                 </a>
               </li>
 
               <li>
-                <a href="https://www.congress.gov.ph/" class="text-dark footer-link"
+                <a href="#!" class="text-dark ZOfooter-link"
                   >House of Representatives</a
                 >
               </li>
 
               <li>
-                <a href="http://sc.judiciary.gov.ph/" class="text-dark footer-link">Supreme Court</a>
+                <a href="#!" class="text-dark ZOfooter-link">Supreme Court</a>
               </li>
               <li>
-                <a href="https://ca.judiciary.gov.ph/" class="text-dark footer-link">Court of Appeals</a>
+                <a href="#!" class="text-dark ZOfooter-link">Court of Appeals</a>
               </li>
               <li>
-                <a href="https://sb.judiciary.gov.ph/" class="text-dark footer-link">Sandiganbayan</a>
+                <a href="#!" class="text-dark ZOfooter-link">Sandiganbayan</a>
               </li>
             </ul>
           </div>
@@ -866,26 +1055,38 @@
       <div class="text-center p-3 text-light bg-dark">&copy; 2023 BSIT-1H</div>
     </footer>
 
+
+
+
+
+
+
+
+
+
+    <input type="hidden" value="https://www.miaa.gov.ph/"/>
+
+
+
     <script src="bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.js"></script>
     <script src="index.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  // Toggle nested navbar on mobile devices
-$(document).ready(function() {
-  $('.navbar-nav .dropdown-toggle').on('click', function(e) {
-    if ($(window).width() < 992) {
-      e.preventDefault();
-      $(this).siblings('.dropdown-menu').toggle();
-    }
-  });
+    <script>
+      // Toggle nested navbar on mobile devices
+      $(document).ready(function () {
+        $(".navbar-nav .dropdown-toggle").on("click", function (e) {
+          if ($(window).width() < 992) {
+            e.preventDefault();
+            $(this).siblings(".dropdown-menu").toggle();
+          }
+        });
 
-  $(window).resize(function() {
-    if ($(window).width() >= 992) {
-      $('.navbar-nav .dropdown-menu').removeAttr('style');
-    }
-  });
-});
-
-</script>
+        $(window).resize(function () {
+          if ($(window).width() >= 992) {
+            $(".navbar-nav .dropdown-menu").removeAttr("style");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
